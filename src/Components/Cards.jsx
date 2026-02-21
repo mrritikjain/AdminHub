@@ -19,10 +19,13 @@ const Cards = () => {
     },
   ];
   return (
-    <div>
+    <div className="flex w-[100%] gap-[1%]">
       {cards.map((card) => (
-        <div key={card.id}>
-          {card.cardName} - {card.NumberCount} - {card.PercentDifference}
+        <div key={card.id} className="bg-slate-50 px-5 py-5 rounded-lg w-[24%] border border-stone-300 hover:scale-105 duration-300">
+          <h2 className="text-lg mb-5 text-taupe-800">{card.cardName}</h2>
+          <div className="flex justify-between items-center"><h2 className="text-4xl font-bold"> {card.NumberCount} </h2>
+          <h3 className="text-lg text-emerald-600 font-bold">{card.PercentDifference} %</h3></div>
+           
         </div>
       ))}
     </div>
